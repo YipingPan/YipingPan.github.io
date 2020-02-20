@@ -7,7 +7,7 @@ CLASSES = {
 };
 
 const MODEL_PATH =
-    'model.json';
+    'https://YipingPan.github.io/model.json';
 
 const IMAGE_SIZE = 192;
 const TOPK_PREDICTIONS = 5;
@@ -25,15 +25,15 @@ const demo = async () => {
 
   status('');
 
-  // Make a prediction through the locally hosted cat.jpg.
-  const catElement = document.getElementById('cat');
-  if (catElement.complete && catElement.naturalHeight !== 0) {
-    predict(catElement);
-    catElement.style.display = '';
+  // Make a prediction through the locally hosted flower.jpg.
+  const flowerElement = document.getElementById('flower');
+  if (flowerElement.complete && flowerElement.naturalHeight !== 0) {
+    predict(flowerElement);
+    flowerElement.style.display = '';
   } else {
-    catElement.onload = () => {
-      predict(catElement);
-      catElement.style.display = '';
+    flowerElement.onload = () => {
+      predict(flowerElement);
+      flowerElement.style.display = '';
     }
   }
 
